@@ -127,7 +127,7 @@ Voor deze reden krijgt Vaadin een score van 4 en Angular een score van 2.
 Open source software is software waarvan de broncode is gepubliceerd en vrij te gebruiken is voor het publiek. Iedereen kan op die manier kopiëren, aanpassen en verspreiden zonder kosten te betalen voor auteursrechten.
 Bij de ontwikkeling van een webapplicatie of een mobiele applicatie is het dus voordelig wanneer de frameworks gratis gebruikt kunnen worden. 
 
-\subsection{Angular}
+\subsection{Angular} \label{Open source Angular}
 Angular wordt aangeboden onder de MIT-licentie.
 De MIT-licentie is een softwarelicentie voor opensourcesoftware. Deze MIT-licentie bijna alles toe. De enige voorwaarde is dat het copyright statement in alle kopieën moet blijven staan.
 de broncode van Angular is beschikbaar op: 
@@ -137,7 +137,7 @@ Verder zijn er ook heel veel voorgemaakte componenten waarvan de broncode beschi
 \\
 \url{https://github.com/angular/components}
 
-\subsection{Vaadin}
+\subsection{Vaadin} \label{Open source Vaadin}
 Vaadin Framework is beschikbaar onder de Apache License, version 2.0.
 De Apache-licentie is een softwarelicentie voor vrije software uitgebracht door de Apache Software Foundation. De licentie staat toe dat deze software aangepast en/of opnieuw verspreid mag worden op voorwaarde dat een kopie van de Apache License wordt meegeleverd en de eerdere copyrightvermeldingen behouden blijven.
 \\ De documentatie van het framework staat onder een andere licentie, namelijk de Creative Commons CC-BY-ND 2.0. Dit houdt in dat licentienemers  het werk mogen  kopiëren, verspreiden, tentoonstellen en uitvoeren en afgeleide werken maken wanneer zij de auteur of licentieverstrekker op een door deze gespecificeerde manier vermelden. Dit mag enkel gebeuren in ongewijzigde vorm.
@@ -154,7 +154,42 @@ De Apache License, version 2.0 waaronder Vaadin valt is net als de MIT-licentie 
 Aangezien dit maar een heel klein verschil betreft en beide frameworks in essentie volledig open source zijn, krijgen ze beiden de maximumscore van 5 op dit onderdeel.
 
 \section{Testing}
+Testen is een belangrijk onderdeel bij het bouwen van robuuste applicaties. Het zorgt ervoor dat fouten in de code op tijd worden opgevangen en geeft de ontwikkelaar vertrouwen in de werking van zijn applicatie. We zullen in dit onderdeel de focus leggen op UI tests aangezien andere tests niet framework specifiek zijn maar gebeuren aan de hand van gestandardiseerde tools zoals JUnit voor Java of Jasmine voor JavaScript.
 
+\section{ Componenten}
+Voorgemaakte componenten kunnen de ontwikkelaar heel veel tijd besparen. Ze zorgen bovendien ook voor een propere en consistente layout. Daarom wordt er in dit onderdeel ingegaan op het aantal beschikbare open source componenten. Deze componenten kunnen zowel aangeboden worden door de ontwikkelaars van het framework zelf als door een third party.
+
+\subsection{Angular}
+Zoals eerder vermeld in sectie \ref{Open source Angular} voorzien de ontwikkelaars van Angular hun gebruikers zelf met een library van voorgedefiniëerde componenten. Deze library heet Material Design voorziet buttons, formulieren, menu's en nog veel meer. Deze UI components kunnen dienen als voorbeeld van hoe Angular code geschreven dient te worden volgens de best practices van het Angular team.
+\\ \\
+Daarenboven zijn er ook heel wat third party libraries beschikbaar. 
+\begin{itemize}
+	\item NGX Bootstrap: Bevat alle belangrijkste Bootstrap componenten.
+	\item Prime NG: Meer dan 70 UI components die onder meer door eBay gebruikt worden. 
+	\item Onsen UI: Focus op hybride en mobile web applicaties voor Android en iOS.
+	\item NG-ZORRO: Chinese library geschreven in TypeScript.
+	\item NG Lightning: Gebruikmakend van het Lightning Design System CSS framework.
+	\item NG Semantic-UI: 27 Verschillende componenten.
+	\item Clarity: ontwikkeld door VMware met een focus op data binding.
+	\item NG2 Charts: 6 verschillende soorten charts voor het visualiseren van data en lists.
+\end{itemize}
+
+\subsection{Vaadin}
+Bij het Vaadin framework voorzien de ontwikkelaars ook een library met componenten voor hun gebruikers onder de naam Vaadin core components. Dit werd eerder reeds vermeld in section \ref{Open source Vaadin}. Deze library bevat 78 verschillende componenten zoals buttons, date pickers, grids en vele anderen. 
+
+Verder zijn er nog een paar, minder bekende third party libraries beschikbaar.
+\begin{itemize}
+	\item Material: Material stijl voor Vaadin 7 en 8.
+	\item Vaadin Charts: Verschillende soorten charts die zorgen voor een betere visualisatie. 
+\end{itemize}
+
+\subsection{Conclusie}
+De ontwikkelaars van beide frameworks voorzien hun gebruikers met een uitgebreide library van voorgedefiniëerde componenten. Het gebruik van deze componenten zorgt voor een responsief en consistent design. Angular beschikt hierboven nog over een groot aantal third party libraries. Dit is niet het geval bij Vaadin.
+Daarom krijgt Vaadin een score van 3, terwijl Angular een score van 5 krijgt.
+
+\section{Performantie}
+
+\section{Documentatie}
 
 \section{Populariteit}
 De populariteit is een belangrijk criterium bij het beoordelen van een framework. Een framework met veel gebruikers heeft een grote community, waardoor het vinden van oplossingen bij problemen makkelijker verloopt dan bij een framework met een kleine community. Daarenboven bepaalt het aantal gebruikers ook de stabiliteit van een framework. Ten slotte bepaalt de populariteit ook het aantal library's die door de community ter beschikking gesteld worden.
