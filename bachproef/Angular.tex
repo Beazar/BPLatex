@@ -1,7 +1,8 @@
 \chapter{Vergelijking Angular en Vaadin}
 \label{ch:angular}
 \section{Mobile}
-In de afgelopen jaren is de ontwikkeling van mobiele applicaties een "booming business" geworden. Dankzij mobiele ondersteuning blijft een applicatie altijd en overal bereikbaar, het zorgt voor een direct marketingkanaal, een grotere merkherkenning, verhoogt het inkomen... Alle voorgaande redenen en nog vele andere bepalen dat mobiele ondersteuning voor een framework belangrijk is.
+In de afgelopen jaren is de ontwikkeling van mobiele applicaties een "booming business" geworden. Dankzij mobiele ondersteuning blijft een applicatie altijd en overal bereikbaar, het zorgt voor een direct marketingkanaal, een grotere merkherkenning, verhoogt het inkomen,... \\
+ Alle voorgaande redenen en nog vele andere bepalen dat mobiele ondersteuning voor een framework belangrijk is.
 
 \begin{figure}[H]
 	\centering
@@ -11,20 +12,20 @@ In de afgelopen jaren is de ontwikkeling van mobiele applicaties een "booming bu
 \end{figure}
 Bij het ontwikkelen van een mobiele applicatie heeft de ontwikkelaar drie opties(zie figuur \ref{fig:native-responsive-web}):
 \begin{itemize}
-	\item Responsive webapplicaties: De webapplicatie zal zich aanpassen aan het device waarop de applicatie wordt gedraaid. Deze aanpak is kostefficiënt omdat er maar een applicatie moet gebouwd worden voor zowel desktop als mobiele gebruikers. Verder moet is er geen download nodig, aangezien de webapplicaties gewoon via de browser kan opgeroepen worden.
+	\item Responsive webapplicaties: De webapplicatie zal zich aanpassen aan het device waarop de applicatie wordt gedraaid. Deze aanpak is kostefficiënt omdat er maar een applicatie moet gebouwd worden voor zowel desktop als mobiele gebruikers. Verder is er geen download nodig, aangezien de webapplicaties gewoon via de browser kan opgeroepen worden.
 	\item Native applicatie: De applicatie wordt specifiek gebouwd voor native platformen zoals iOS of Android. De voordelen van native applicaties is dat ze een betere performantie hebben, offline beschikbaar zijn en push notificaties kunnen sturen. Anderzijds moet elke applicatie gebouwd en getest worden voor elk ondersteund platform.
-	\item Progressive webapplicaties(PWA):  Progressive webapplicaties zijn websites gebouwd met webtechnologie die zich gedragen als een app. Ze zijn de opvolgers van de 'Hybrid Applicatie' maar in tegenstelling tot de Hybrid Applicatie vereisen ze geen download. Net als de native applicaties kunnen ze geraadpleegd worden zonder internetverbinding en kunnen ze push notificaties uitsturen. 
+	\item Progressive webapplicaties(PWA):  Progressive webapplicaties zijn websites gebouwd met webtechnologie die zich gedragen als een app. Ze zijn de opvolgers van de hybride applicatie(een downloadbare app die de browser opstart en toont zonder navigatie) maar in tegenstelling tot de hybride applicatie vereisen ze geen download. Net als de native applicaties kunnen ze geraadpleegd worden zonder internetverbinding en kunnen ze push notificaties uitsturen. 
 \end{itemize}
 
 Vaadin en Angular hebben zeer verschillende aanpakken met betrekking tot mobiele ondersteuning. Waar de focus van Vaadin op het web ligt, zorgt Angular voor herbruikbaarheid van delen van de applicatie om mobiele applicaties te bouwen.
 \subsection{Angular}
-De ontwikkelaar heeft verschillende keuzes wanneer hij een mobiele applicatie wil ontwikkelen met Angular. Hij kan een zowel een responsive webapplicatie als een progressive webapplicatie maken. Hij kan zelfs een native applicatie maken wanneer hij de template maakt met NativeScript in plaats van HTML. 
+De ontwikkelaar heeft verschillende keuzes wanneer hij een mobiele applicatie wil ontwikkelen met Angular. Hij kan zowel een responsive webapplicatie als een progressive webapplicatie maken. Hij kan zelfs een native applicatie maken wanneer hij de template maakt met NativeScript in plaats van HTML. 
 
 Het responsief maken van de applicatie gebeurt aan de hand van CSS media query's. Deze media query's staan de ontwikkelaar toe om verschillende regels voor de layout toe te voegen afhankelijk van de grootte van het scherm van het device. Verder kunnen de ontwikkelaars ook listeners toevoegen in de TypeScript code die reageren veranderingen in de grootte van het scherm. Zo kunnen bepaalde componenten veranderd worden als de grootte van het scherm verandert. 
 
 \subsection{Vaadin}
 Wanneer de ontwikkelaar ervoor kiest om de mobiele applicatie te bouwen in Vaadin heeft hij twee keuzes: een responsive webapplicatie of een progressive webapplicatie. 
-Voor het ontwikkelen van een progressive webapplicatie zijn er vanuit een technisch standpunt twee dingen noodzakelijk: een  Web App Manifest file en een ServiceWorker JavaScript file. De manifest file zorgt voor metadata zoals kleuren en iconen voor operating system integratie, de ServiceWorker zorgt voor caching en push notificaties.
+Voor het ontwikkelen van een progressive webapplicatie zijn er vanuit technisch standpunt twee dingen noodzakelijk: een  Web App Manifest file en een ServiceWorker JavaScript file. De manifest file zorgt voor metadata zoals kleuren en iconen voor operating system integratie, de ServiceWorker zorgt voor caching en push notificaties.
 Terwijl de ServiceWorker en de manifest file in Angular automatisch worden aangemaakt, moeten deze bij Vaadin manueel aangemaakt worden. Verder zal de applicatie ook niet offline beschikbaar zijn aangezien de application state wordt bijgehouden door de server.
 Dit leidt ertoe dat het opzetten van een progressive webapplicatie in Vaadin moeilijker is en langer duurt.  
 Vanaf de volgende versie van Vaadin (Vaadin 13) zou de ServiceWorker en de manifest file echter wel aan het framework toegevoegd worden. 
@@ -56,11 +57,11 @@ Beide frameworks zijn compatibel met alle populaire browsers. Daarom krijgen zow
 Het implementeren van data binding is belangrijk voor frameworks aangezien het heel wat tijd kan besparen. Er zijn verschillende soorten data binding die we voor elk framework zullen bespreken.
 \\  \\
 \textbf{one-way data binding} \hspace{1cm} Een aanpassing in het model zal automatisch de views/templates aanpassen.
-\\
+\\ \\
 \textbf{two-way data binding} \hspace{1cm} Het veranderen van de view resulteert in een verandering in het model en een verandering in het model resulteert in een aangepaste view. 
-\\
+\\ \\
 \textbf{three-way data binding} \hspace{1cm} De data wordt gesynchroniseerd met een  remote storage. 
-\\
+\\ \\
 \textbf{four-way data binding} \hspace{1cm} De data wordt gesynchroniseerd met een  lokale database, die op zijn beurt weer gesynchroniseerd wordt met een remote storage.
 
 \subsection{Angular}
@@ -128,9 +129,9 @@ Open source software is software waarvan de broncode is gepubliceerd en vrij te 
 Bij de ontwikkeling van een webapplicatie of een mobiele applicatie is het dus voordelig wanneer de frameworks gratis gebruikt kunnen worden. 
 
 \subsection{Angular} \label{Open source Angular}
-Angular wordt aangeboden onder de MIT-licentie.
-De MIT-licentie is een softwarelicentie voor opensourcesoftware. Deze MIT-licentie bijna alles toe. De enige voorwaarde is dat het copyright statement in alle kopieën moet blijven staan.
-de broncode van Angular is beschikbaar op: 
+Angular wordt aangeboden onder de MIT-licentie \autocite{MIT2019}.
+De MIT-licentie is een softwarelicentie voor opensourcesoftware. Deze MIT-licentie staat bijna alles toe. De enige voorwaarde is dat het copyright statement in alle kopieën moet blijven staan.
+De broncode van Angular is beschikbaar op: 
 \\
 \url{https://github.com/angular/angular} \\ \\
 Verder zijn er ook heel veel voorgemaakte componenten waarvan de broncode beschikbaar is. Angular heeft zelf ook een library met componenten die ze beschikbaar stellen onder de naam Material Design. Net als het framework worden deze componenten aangeboden onder de MIT-licentie. De broncode van deze library kan gevonden worden op:
@@ -138,7 +139,7 @@ Verder zijn er ook heel veel voorgemaakte componenten waarvan de broncode beschi
 \url{https://github.com/angular/components}
 
 \subsection{Vaadin} \label{Open source Vaadin}
-Vaadin Framework is beschikbaar onder de Apache License, version 2.0.
+Vaadin Framework is beschikbaar onder de Apache License, version 2.0 \autocite{Apache2019}.
 De Apache-licentie is een softwarelicentie voor vrije software uitgebracht door de Apache Software Foundation. De licentie staat toe dat deze software aangepast en/of opnieuw verspreid mag worden op voorwaarde dat een kopie van de Apache License wordt meegeleverd en de eerdere copyrightvermeldingen behouden blijven.
 \\ De documentatie van het framework staat onder een andere licentie, namelijk de Creative Commons CC-BY-ND 2.0. Dit houdt in dat licentienemers  het werk mogen  kopiëren, verspreiden, tentoonstellen en uitvoeren en afgeleide werken maken wanneer zij de auteur of licentieverstrekker op een door deze gespecificeerde manier vermelden. Dit mag enkel gebeuren in ongewijzigde vorm.
 \\De broncode van het framework kan gevonden worden op: 
@@ -160,7 +161,7 @@ Testen is een belangrijk onderdeel bij het bouwen van robuuste applicaties. Het 
 Voorgemaakte componenten kunnen de ontwikkelaar heel veel tijd besparen. Ze zorgen bovendien ook voor een propere en consistente layout. Daarom wordt er in dit onderdeel ingegaan op het aantal beschikbare open source componenten. Deze componenten kunnen zowel aangeboden worden door de ontwikkelaars van het framework zelf als door een third party.
 
 \subsection{Angular}
-Zoals eerder vermeld in sectie \ref{Open source Angular} voorzien de ontwikkelaars van Angular hun gebruikers zelf met een library van voorgedefiniëerde componenten. Deze library heet Material Design voorziet buttons, formulieren, menu's en nog veel meer. Deze UI components kunnen dienen als voorbeeld van hoe Angular code geschreven dient te worden volgens de best practices van het Angular team.
+Zoals eerder vermeld in sectie \ref{Open source Angular} voorzien de ontwikkelaars van Angular hun gebruikers zelf met een library van voorgedefiniëerde componenten. Deze library heet Material Design en voorziet buttons, formulieren, menu's en nog veel meer. Deze UI components kunnen dienen als voorbeeld van hoe Angular code geschreven dient te worden volgens de best practices van het Angular team.
 \\ \\
 Daarenboven zijn er ook heel wat third party libraries beschikbaar. 
 \begin{itemize}
@@ -190,6 +191,31 @@ Daarom krijgt Vaadin een score van 3, terwijl Angular een score van 5 krijgt.
 \section{Performantie}
 
 \section{Documentatie}
+Het documenteren van frameworks is een belangrijk proces in de ontwikkeling van applicatie frameworks. Het is een voorwaarde die vervuld moet worden om een framework op een kwaliteitsvolle manier te kunnen gebruiken. Deze documentatie moet niet enkel uitgebreid zijn, maar ook makkelijk begrijpbaar, accuraat en up-to-date zijn. Goede documentatie is bovendien dynamisch: het maakt gebruik van geavanceerde visualisatie technieken zoals voorbeeldcode, afbeeldingen en video's. Dit in tegenstelling tot de verouderde statische documentatie zoals die de opbouw van een kookboek volgen. 
+
+\subsection{Angular}
+De documentatie van Angular \autocite{Angular2019} is zeer uitgebreid (16.5 MB) en is eenvoudig vindbaar op de website van Angular of via een zoekmachine. De documentatie volgt de chronologische opbouw van een applicatie. Zo start de documenatie met een "Getting started" pagina waar getoond wordt welke installaties moeten gebeuren en hoe het genereren van een project gebeurt. 
+Hierna volgt een tutorial waarin een voorbeeldapplicatie rond superhelden wordt opgebouwd in zes stappen. \\ Na de tutorial volgt een onderdeel waarin de "Fundamentals" van het Angular framework worden uitgelegd. Hierin geeft de documentatie ondermeer informatie over het implementeren van formulieren en navigatie. \\
+Vervolgens worden een aantal belangrijke technieken overlopen zoals service workers en security.  \\
+Na de technieken gaat men over naar setup en deployment. Hier behandelt de documentatie onderdelen zoals testing, TypeScript configuratie en npm dependencies. Na dit onderdeel heeft de gebruiker in principe alle informatie die hij nodig heeft om een volledige applicatie op te bouwen.\\
+Ten slotte volgen nog enkele algemene onderdelen met informatie rond releases, referenties en CLI commands. 
+
+De documentatie zit vol met afbeeldingen en code snippets, maar er zijn geen video's of audiofragmenten aanwezig. Indien de gebruiker hiervan gebruik wil maken moet hij gebruik maken van third-party documentatie zoals video's op video sharing websites of podcasts. De documentatie is bovendien enkel online beschikbaar, deze downloaden in PDF formaat is niet mogelijk. 
+
+\subsection{Vaadin}
+Documenatie bij Vaadin is uitgebreid(1.5 MB) en eenvoudig vindbaar op de website van Vaadin of via een zoekmachine. De flow van deze documenatie is chronologisch opgedeeld, waarbij er gestart wordt met een overzicht en een introductie. \\
+Na deze introductie worden verschillende stappen gevolgd om een applicatie op te bouwen. Het eerste onderdeel handelt rond navigatie. Hierna volgen enkele algemene onderdelen zoals browser features, het gebruik van components en data binding. \\ 
+Tot hiertoe heeft de documentatie het enkel over Java. In de volgende stap wordt er uitgelegd hoe je HTML, JavaScript en CSS files kan koppelen aan de applicatie. 
+Hierna volgen enkele onderdelen in verband met de opmaak van de applicatie zoals het thematiseren van de applicatie voor een consistente layout, het creëren van componenten, het integreren van web componenten en het creëren van templates. \\
+Hierna volgen nog enkele algemene onderdelen zoals onder andere: integreren van Spring of CDI, packaging voor productie of het migreren van Vaadin 8 naar Vaadin 10. \\
+
+Er zijn volop code snippets en afbeeldingen aanwezig, maar ook hier zijn er geen video's of audiofragmenten. Deze zijn wel beschikbaar via een third-party op andere kanalen, maar de correctheid van deze bronnen is niet altijd te controleren. De documenatie is enkel online beschikbaar.
+
+\subsection{Conclusie}
+Hoewel de documentatie van Angular een pak groter is dan die van Vaadin kan er niet geconcludeerd worden dat deze beter is. Beide frameworks beschikken over een uitgebreide documentatie die goed gevisualiseerd wordt met code snippets en afbeeldingen. Het enige opmerkbare verschil is dat Angular werkt met een tutorial applicatie in hun documentatie. Vaadin stelt ook een voorbeeld applicatie ter beschikking op hun Github \autocite{VaadinDemo2019}, maar deze is niet verwerkt in hun documentatie.
+
+Beide frameworks verwerken geen video's of audiofragmenten in hun documentatie, die bovendien niet offline beschikbaar is. Hierdoor krijgen beide frameworks een score van 3.
+
 
 \section{Populariteit}
 De populariteit is een belangrijk criterium bij het beoordelen van een framework. Een framework met veel gebruikers heeft een grote community, waardoor het vinden van oplossingen bij problemen makkelijker verloopt dan bij een framework met een kleine community. Daarenboven bepaalt het aantal gebruikers ook de stabiliteit van een framework. Ten slotte bepaalt de populariteit ook het aantal library's die door de community ter beschikking gesteld worden.
@@ -252,7 +278,7 @@ Elk jaar voert Stack Overflow zijn Developer Survey \autocite{DeveloperSurvey201
 \subsubsection{Resultaten 2017}
 In 2017 was Angular het tweede meest gebruikte framework, met maar liefst 44 percent van de respondenten die reeds het framework gebruikt hadden. Bovendien vonden meer dan de helft van de gebruikers het een leuk framework om te gebruiken.
 
-Vaadin werd niet genoemd in deze enquête wat erop wijst dat het in 2017 geen populair framework was.
+Vaadin werd niet genoemd in deze enquête wat erop wijst dat het in 2017 geen populair.
 
 \begin{figure}[H]
 	\centering
@@ -288,9 +314,9 @@ Vaadin werd niet genoemd in deze enquête wat erop wijst dat het in 2018 geen po
 \end{figure}
 
 \subsubsection{Resultaten 2019}
-De daling van de populariteit van Angular zette zich ook in 2019 verder. Het zakte van de tweede naar de derde plaats van populairste framework. Het aantal respondenten die gebruik maakten van het framework zakte naar 31 percent. Nochtans steeg het percentage van ontwikkelaars die graag gebruik maken naar 57 percent.
+De daling van de populariteit van Angular zette zich ook in 2019 verder. Het zakte van de tweede naar de derde plaats van populairste framework. Het aantal respondenten die gebruik maakten van het framework zakte naar 31 percent. Nochtans steeg het percentage van ontwikkelaars die er graag gebruik van maken naar 57 percent.
 
-Vaadin werd niet genoemd in deze enquête wat erop wijst dat het in 2019 geen populair framework was.
+Vaadin werd niet genoemd in deze enquête wat erop wijst dat het in 2019 geen populair framework is.
 
 \begin{figure}[H]
 	\centering
@@ -335,7 +361,7 @@ GitHub is een populaire website waarop software kan geplaatst worden. GitHub is 
 \end{table}
 
 \subsection{Conclusie}
-Angular is duidelijker veel populairder dan Vaadin, waardoor het framework stabieler is en de gebruiker kan rekenen op meer ondersteuning vanuit de community. Angular behoort tot de meest populaire frameworks, terwijl Vaadin niet populair is. De enige factor waar Vaadin beter op scoort dan Angular is het percentage opgeloste issues op Stack Overflow. 
+Angular is duidelijk veel populairder dan Vaadin, waardoor het framework stabieler is en de gebruiker kan rekenen op meer ondersteuning vanuit de community. Angular behoort tot de meest populaire frameworks, terwijl Vaadin niet populair is. De enige factor waar Vaadin beter op scoort dan Angular is het percentage opgeloste issues op Stack Overflow. 
 
 Door de hierboven genoemde redenen krijgt Angular voor dit requirement een score van 5 en Vaadin een score van 2.
 
