@@ -157,6 +157,12 @@ Aangezien dit maar een heel klein verschil betreft en beide frameworks in essent
 \section{Testing}
 Testen is een belangrijk onderdeel bij het bouwen van robuuste applicaties. Het zorgt ervoor dat fouten in de code op tijd worden opgevangen en geeft de ontwikkelaar vertrouwen in de werking van zijn applicatie. We zullen in dit onderdeel de focus leggen op UI tests aangezien andere tests niet framework specifiek zijn maar gebeuren aan de hand van gestandardiseerde tools zoals JUnit voor Java of Jasmine voor JavaScript.
 
+\subsection{Angular}
+
+\subsection{Vaadin}
+
+\subsection{Conclusie}
+
 \section{ Componenten}
 Voorgemaakte componenten kunnen de ontwikkelaar heel veel tijd besparen. Ze zorgen bovendien ook voor een propere en consistente layout. Daarom wordt er in dit onderdeel ingegaan op het aantal beschikbare open source componenten. Deze componenten kunnen zowel aangeboden worden door de ontwikkelaars van het framework zelf als door een third party.
 
@@ -189,6 +195,47 @@ De ontwikkelaars van beide frameworks voorzien hun gebruikers met een uitgebreid
 Daarom krijgt Vaadin een score van 3, terwijl Angular een score van 5 krijgt.
 
 \section{Performantie}
+De performantie van een framework is een belangrijke parameter bij een vergelijking omdat het inzicht verschaft in de werking van het framework. Het beantwoordt een aantal vragen zoals: hoe gaat het framework om met grote hoeveelheden data, hoe snel start het framework en wat is de belasting van de applicatie op de processor.
+
+De tests worden allemaal uitgevoerd in dezelfde omgeving. De details van deze omgeving zijn als volgt:
+
+\begin{itemize}
+	
+	\item Browser: Google Chrome Versie 74.0.3729.157 (Officiële build) (64-bits)
+	\item Operating System: Microsoft Windows 10 Pro
+	\item Fysiek geheugen: 16.0 GB RAM
+	\item Processor: AMD FX(tm)-8350, 4000 MHz
+\end{itemize}
+
+De tests worden uitgevoerd op de applicaties die eerder beschreven zijn in sectie \ref{ch:methodologie}.
+
+\subsection{Requests}
+In dit onderdeel worden de groottes van de request die gedownload worden in de applicatie besproken. Om dit te controleren wordt er gebruik gemaakt van de Google Chrome Developer Tools Network Tab. De tests gebeurt bij het openen van de homepage van de applicatie.
+\subsubsection{Angular}
+
+\begin{table}[H]
+	\begin{tabular}{|l|l|l|l|}
+		\hline
+		\textbf{Aantal requests} & \textbf{Grootte} & \textbf{Resources} & \textbf{Tijd om te laden} \\ \hline
+		13                       & 2.5KB            & 5.3MB resources    & 967 ms                    \\ \hline
+	\end{tabular}
+\end{table}
+\subsubsection{Vaadin}
+\begin{table}[H]
+	\begin{tabular}{|l|l|l|l|}
+		\hline
+		\textbf{Aantal requests} & \textbf{Grootte} & \textbf{Resources} & \textbf{Tijd om te laden} \\ \hline
+		17                       & 12.9 KB          & 1.6MB resources    & 278 ms                    \\ \hline
+	\end{tabular}
+\end{table}
+
+\subsection{Gebruik processor}
+
+\subsubsection{Angular}
+524.9 MB
+
+\subsubsection{Vaadin}
+322.7 MB
 
 \section{Documentatie}
 Het documenteren van frameworks is een belangrijk proces in de ontwikkeling van applicatie frameworks. Het is een voorwaarde die vervuld moet worden om een framework op een kwaliteitsvolle manier te kunnen gebruiken. Deze documentatie moet niet enkel uitgebreid zijn, maar ook makkelijk begrijpbaar, accuraat en up-to-date zijn. Goede documentatie is bovendien dynamisch: het maakt gebruik van geavanceerde visualisatie technieken zoals voorbeeldcode, afbeeldingen en video's. Dit in tegenstelling tot de verouderde statische documentatie zoals die de opbouw van een kookboek volgen. 
@@ -215,6 +262,10 @@ Er zijn volop code snippets en afbeeldingen aanwezig, maar ook hier zijn er geen
 Hoewel de documentatie van Angular een pak groter is dan die van Vaadin kan er niet geconcludeerd worden dat deze beter is. Beide frameworks beschikken over een uitgebreide documentatie die goed gevisualiseerd wordt met code snippets en afbeeldingen. Het enige opmerkbare verschil is dat Angular werkt met een tutorial applicatie in hun documentatie. Vaadin stelt ook een voorbeeld applicatie ter beschikking op hun Github \autocite{VaadinDemo2019}, maar deze is niet verwerkt in hun documentatie.
 
 Beide frameworks verwerken geen video's of audiofragmenten in hun documentatie, die bovendien niet offline beschikbaar is. Hierdoor krijgen beide frameworks een score van 3.
+
+
+\section{Aantal programmeertalen}
+
 
 
 \section{Populariteit}
