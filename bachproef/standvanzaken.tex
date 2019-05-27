@@ -87,12 +87,12 @@ Een Single Page Application (SPA) is een webapplicatie die draait op één enkel
 \end{figure}
 
 \section{MVC}
-De applicaties die opgebouwd zullen worden om beide frameworks te vergelijken zullen gebruik maken van het MVC(Model-View-Controller) patroon (zie figuur \ref{fig:Mvc} ). Daarom is het noodzakelijk om dit patroon kort te beschrijven.
+De applicaties die opgebouwd zullen worden om beide frameworks te vergelijken zullen gebruik maken van het MVC (Model-View-Controller) patroon (zie figuur \ref{fig:Mvc} ). Daarom is het noodzakelijk om dit patroon kort te beschrijven.
 
 
 Model View Controller is een ontwerppatroon dat een applicatie verdeelt in drie eenheden met verschillende verantwoordelijkheden:
 
-	\textbf{Model}  \hspace{1cm} Het datamodel specifieert de logische structuur van de data in de applicatie. Het zal beschrijven hoe de data weergegeven wordt op niveau van de databank. Het datamodel beschrijft welke entiteiten verbonden zijn aan welke tabellen en hoe het zit met de relaties tussen deze datastructuren.   					\\ \\
+	\textbf{Model}  \hspace{1cm} Het datamodel specificeert de logische structuur van de data in de applicatie. Het zal beschrijven hoe de data weergegeven wordt op niveau van de databank. Het datamodel beschrijft welke entiteiten verbonden zijn aan welke tabellen en hoe het zit met de relaties tussen deze datastructuren.   					\\ \\
 	\textbf{View} \hspace{1cm} De view bepaalt hoe de data zal weergegeven worden op het scherm. Het doet geen verwerking van de gegevens maar wordt enkel gebruikt voor de interactie met de user. De userinterface-elementen worden allemaal gedefinieerd in dit onderdeel. 						\\	\\
 	\textbf{Controller} \hspace{1cm} De controller verzorgt de interactie tussen de view en het model. De controller bestaat uit actions die reageren op de handelingen van de gebruiker. Aan de hand van die actions wordt het juiste model gebruikt en de passende view weergegeven.  			\\	\\
 De voordelen van dit patroon zijn talrijk: de applicatie zal makkelijker uitbreidbaar worden, het ontwikkelingsproces zal sneller verlopen, dubbele code wordt vermeden, een model kan verschillende views toegewezen krijgen en modificatie van één van de drie eenheden zal geen invloed hebben op de andere eenheden.
@@ -109,6 +109,13 @@ De voordelen van dit patroon zijn talrijk: de applicatie zal makkelijker uitbrei
 
 Angular is een front-end framework gebaseerd op TypeScript dat onderhouden wordt door het Angular Team van Google. Het is een volledig herschreven versie van AngularJS.
 De belangrijkste bouwstenen van een Angular applicatie zijn de modules, componenten en services (zie figuur \ref{fig:Angular-Module-Component}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{Angular-Module-Component}
+	\caption{Overzicht van de Angular bouwstenen \autocite{Trivedi2016}}
+	\label{fig:Angular-Module-Component}
+\end{figure}
 
 
 \begin{figure}
@@ -149,26 +156,20 @@ Het modulariteitssysteem van Angular heet NgModules en kan zowel functionaliteit
 \\ \\
 Elke Angular app heeft minstens één NgModule klasse, genaamd de root module. Gewoonlijk wordt deze de AppModule genoemd en wordt deze geplaatst in een file met de naam app.module.ts. Deze module zorgt voor het opstarten van de applicatie. 
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.6\linewidth]{Angular-Module-Component}
-	\caption{Overzicht van de Angular bouwstenen \autocite{Trivedi2016}}
-	\label{fig:Angular-Module-Component}
-\end{figure}
 
-\textbf{NgModule metadata} \hspace{1cm} Een NgModule wordt steeds gedefinieerd door een klasse met de decorator @NgModule(). Deze decorator is een functie dat een metadata object gebruikt om de module te beschrijven. De belangrijkste attributen van dit object zijn de volgende: 
+\textbf{NgModule metadata} \hspace{1cm} Een NgModule wordt steeds gedefinieerd door een klasse met de decorator @NgModule(). Deze decorator is een functie die een metadata object gebruikt om de module te beschrijven. De belangrijkste attributen van dit object zijn de volgende: 
 \begin{itemize}
-	\item declarations: De componenten, directives en pipes die toebehoren aan deze module.  
-	\item exports: De subset van declaraties dat andere NgModules moeten kunnen importeren. 
-	\item imports: Andere modules die nodig zijn binnen deze NgModule. 
-	\item providers: Services die deze NgModule gebruikt. Providers die op dit niveau worden gedeclareerd kunnen over de hele app gebruikt worden. Het is echter ook mogelijk om providers te declareren op niveau van componenten, wat vaak een betere optie is.
-	\item bootstrap: Dit attribuut moet enkel ingesteld worden door de root NgModule. Het bepaalt de algemene view die alle andere views beheert.
+	\item declarations: de componenten, directives en pipes die toebehoren aan deze module;  
+	\item exports: de subset van declaraties die andere NgModules moeten kunnen importeren; 
+	\item imports: andere modules die nodig zijn binnen deze NgModule; 
+	\item providers: services die deze NgModule gebruikt. Providers die op dit niveau worden gedeclareerd kunnen over de hele app gebruikt worden. Het is echter ook mogelijk om providers te declareren op niveau van componenten, wat vaak een betere optie is;
+	\item bootstrap: dit attribuut moet enkel ingesteld worden door de root NgModule. Het bepaalt de algemene view die alle andere views beheert.
 \end{itemize}
 
 Het NgModule systeem is verschillend van het JavaScript module systeem voor het beheren van collecties van JavaScript objecten. Het NgModule systeem en het JavaScript module systeem zijn complementaire systemen die kunnen gecombineerd worden bij het schrijven van applicaties. 
 
 \subsection{Component}
-Componenten zijn de eenvoudigste bouwstenen van een angular applicatie. Ze beheren een deel van het scherm dat bekend staat als een view. Binnen een MVC context zouden ze omschreven worden als een controller. Een component behoort steeds toe aan een NgModule, zodanig dat het beschikbaar kan zijn voor een andere component of applicatie. 
+Componenten zijn de eenvoudigste bouwstenen van een angular applicatie. Ze beheren een deel van het scherm dat bekend staat als een view. Binnen een  context zouden ze omschreven worden als een controller. Een component behoort steeds toe aan een NgModule, zodanig dat hij beschikbaar kan zijn voor een andere component of applicatie. 
 
 Een component heeft verschillende lifecycle hooks (zie figuur \ref{fig:lifecyclehooks}), zoals de ngOnInit(). In elk van deze lifecycle hooks kan je applicatie bepaalde acties uitvoeren. Angular zal componenten automatisch aanmaken, updaten en verwijderen terwijl de gebruiker navigeert door de applicatie. 
 
@@ -179,26 +180,26 @@ Een component heeft verschillende lifecycle hooks (zie figuur \ref{fig:lifecycle
 	\label{fig:lifecyclehooks}
 \end{figure}
 
-\textbf{Component metadata} \hspace{1cm} Een component klasse is een klasse die wordt geïdentificeerd aan de hand van de @Component decorator. Deze klasse zal de metadata van de component bevatten. De metadata van een component laat aan Angular weten waar ze de bouwstenen kan vinden die nodig zijn om de component en zijn view aan te maken. De combinatie van een component met zijn template zorgen voor een view. 
+\textbf{Component metadata} \hspace{1cm} Een component klasse is een klasse die wordt geïdentificeerd aan de hand van de @Component decorator. Deze klasse zal de metadata van de component bevatten. De metadata van een component laat aan Angular weten waar ze de bouwstenen kan vinden die nodig zijn om de component en zijn view aan te maken. De combinatie van een component met zijn template zorgt voor een view. 
 De belangrijkste configuratieopties van een component zijn de volgende:
 \begin{itemize}
-	\item selector: De selector vertelt Angular om een component te maken op de plaats waar het de corresponderende tag vindt in de HTML. 
-	\item templateUrl: Het adres van de HTML template die gelinkt is aan de component. Dit adres is relatief aan de module. 
-	\item providers: Services die door deze component gebruikt worden. Deze worden weergegeven in een array. 
+	\item selector: de selector vertelt Angular om een component te maken op de plaats waar het de corresponderende tag vindt in de HTML; 
+	\item templateUrl: het adres van de HTML template die gelinkt is aan de component. Dit adres is relatief aan de module; 
+	\item providers: services die door deze component gebruikt worden. Deze worden weergegeven in een array. 
 \end{itemize}
 
 \textbf{Template en views} \hspace{1cm} De view van een component wordt steeds gedefiniëerd aan de hand van een bijhorende template. De template is een HTML form dat Angular de informatie doorgeeft die nodig is om de component weer te geven. Views worden hiërarchisch geordend, waardoor het mogelijk is om volledige onderdelen van de user interface aan te passen of te verbergen. De template die rechtstreeks geassocieerd is met de component noemt men de host view. Deze host view kan embedded views bevatten die beheerd worden door andere componenten. Deze componenten kunnen zich in een andere NgModule bevinden. 
 
 \textbf{Data binding} \hspace{1cm} Databinding is het proces dat zorgt voor een connectie tussen de interface van de applicatie en het model. Wanneer de data verandert van waarde, zal de interface ook aangepast worden. Het opstellen van zo een mechanisme is een moeilijke en arbeidsintensieve taak. Gelukkig is dit met Angular eenvoudig te implementeren. Angular voorziet zelfs in two-way binding, wat inhoudt dat ook het model kan aangepast worden via de interface, bijvoorbeeld door het invullen van een formulier. Angular voorziet in drie verschillende manieren om data te binden:
 \begin{itemize}
-	\item interpolation: Techniek om waardes te binden aan een User Interface element.
+	\item interpolation: techniek om waardes te binden aan een User Interface element;
 	Deze techniek kan enkel gebruikt worden bij one-way binding van component naar view. Interpolation gebruikt als scheidingsteken de dubbele accolades \{\{ en \}\}. Interpolation is een speciale syntax die door Angular wordt geconverteerd naar property binding.
-	\item property binding: Techniek om waardes te binden aan DOM attributen van de HTML elementen. Zo kunnen de attributen van view elementen ingesteld worden, zoals de bron van een afbeelding. Net zoals interpolation kan deze techniek enkel gebruikt worden bij one-way binding van component naar view. De scheidingstekens van property binding zijn de vierkante haakjes [ en ].
-	\item event binding: Wanneer users interageren met de applicatie zoals een click of een actie van het toetsenbord kan dit via event binding opgevangen worden. Event binding is een one-way binding maar in tegenstelling tot de voorgaande technieken werkt deze van view naar component. De scheidingstekens van event binding zijn de ronde haakjes ( en ). 
+	\item property binding: techniek om waardes te binden aan DOM attributen van de HTML elementen. Zo kunnen de attributen van view elementen ingesteld worden, zoals de bron van een afbeelding. Net zoals interpolation kan deze techniek enkel gebruikt worden bij one-way binding van component naar view. De scheidingstekens van property binding zijn de vierkante haakjes [ en ];
+	\item event binding: wanneer users interageren met de applicatie zoals een click of een actie van het toetsenbord kan dit via event binding opgevangen worden. Event binding is een one-way binding maar in tegenstelling tot de voorgaande technieken werkt deze van view naar component. De scheidingstekens van event binding zijn de ronde haakjes ( en ). 
 \end{itemize}
 Door bovenstaande one-way binding technieken te combineren is het in Angular mogelijk om two-way binding te bekomen. 
 
-\textbf{pipes} \hspace{1cm} Dankzij pipes is het mogelijk om waardes die worden weergegeven in de template HTML te transformeren. Een klasse met de @Pipe decorator definieert een functie die input waardes transformeert naar output waardes voor een view. Angular voorziet al enkele pipes zoals de date pipe of de currency pipe, maar het is ook mogelijk om zelf pipes te maken. Om een transformatie in een HTML template te specifiëren gebruikt men de pipe operator: |. 
+\textbf{pipes} \hspace{1cm} Dankzij pipes is het mogelijk om waardes die worden weergegeven in de template HTML te transformeren. Een klasse met de @Pipe decorator definieert een functie die input waardes transformeert naar output waardes voor een view. Angular voorziet al enkele pipes zoals de date pipe of de currency pipe, maar het is ook mogelijk om zelf pipes te maken. Om een transformatie in een HTML template te specificeren gebruikt men de pipe operator: |. 
 
 \textbf{directives} \hspace{1cm} De templates van Angular zijn dynamisch. Wanneer ze weergegeven worden zullen ze getransformeerd worden volgens de instructies die meegegeven worden door directives. Een directive is een klasse met de @Directive() decorator. Er zijn twee soorten directives: structural en attribute. 
 
@@ -208,17 +209,17 @@ De attribute directives kunnen het gedrag of het voorkomen van een bestaand elem
 Een voorbeeld van een attribute directive is de ngModel die zorgt voor two-way data binding. Het verandert het gedrag van een bestaand element zoals bijvoorbeeld <input>. 
 
 \subsection{Service}
-Service is een brede naam voor elke waarde, functie of feature dat een applicatie nodig heeft. Een service is een klasse met een zeer specifiek doel. Het grote verschil tussen een component en een service is het feit dat een component gelinkt is aan een view, terwijl een service dat niet is. \\
+Service is een brede naam voor elke waarde, functie of feature die een applicatie nodig heeft. Een service is een klasse met een zeer specifiek doel. Het grote verschil tussen een component en een service is het feit dat een component gelinkt is aan een view, terwijl een service dat niet is. \\
 Een component kan bepaalde taken delegeren aan een service, zoals het ophalen van data van een server of het valideren van de input van een gebruiker. De services kunnen hergebruikt worden over de hele applicatie waardoor er minder redundante code zal ontstaan. Bovendien zorgen ze er ook voor dat componenten niet te groot worden. 
 
-\textbf{dependency injection} \hspace{1cm} services worden geïnjecteerd in een component, waardoor deze components toegang hebben tot die service klasse.De service klasse heeft geen specifieke decorator, maar maakt gebruik van de @Injectable() decorator. Deze zorgt ervoor dat Angular de klasse kan injecteren in een component als een dependency. Een dependency hoeft geen service te zijn, maar kan evenwel een functie of een waarde zijn. 
+\textbf{dependency injection} \hspace{1cm} services worden geïnjecteerd in een component, waardoor deze components toegang hebben tot die service klasse. De service klasse heeft geen specifieke decorator, maar maakt gebruik van de @Injectable() decorator. Deze zorgt ervoor dat Angular de klasse kan injecteren in een component als een dependency. Een dependency hoeft geen service te zijn, maar kan evenwel een functie of een waarde zijn. 
 
 Wanneer Angular ontdekt dat een component een dependency heeft op een service, zal het eerst nakijken of er al bestaande instanties zijn van die service. Als die er nog niet zijn, dan zal de injector er een aanmaken, gebruik makend van de provider van de service. Pas wanneer alle services aangemaakt zijn kan Angular de constructor van de component aanroepen, met de services als argumenten. 
 
 Elke service moet minstens één provider hebben. Deze kan deel uitmaken van de metadata van de service, of kan geregistreerd worden in specifieke modules of componenten. 
 
 \section{Vaadin}
-Vaadin is een platform voor de ontwikkeling van webapplicaties. Het Vaadin platform bestaat uit enkele verschillende onderdelen zoals web components, een reeks tools en een Java web framework genaamd Vaadin Flow. Wanneer in deze paper gesproken wordt over Vaadin, hebben we het eigenlijk over het framework Vaadin Flow, wat het belangrijkste onderdeel is van het Vaadin platform. 
+Vaadin is een platform voor de ontwikkeling van webapplicaties. Het Vaadin platform bestaat uit enkele verschillende onderdelen zoals web components, een reeks tools en een Java web framework genaamd Vaadin Flow. Wanneer in deze scriptie gesproken wordt over Vaadin, hebben we het eigenlijk over het framework Vaadin Flow, wat het belangrijkste onderdeel is van het Vaadin platform. 
 \subsection{Vaadin Flow}
 
 "Vaadin Flow connects the Java ecosystem to your web platform. Flow is an integral part of the Vaadin platform." \autocite{Vaadin2019} 
@@ -227,10 +228,10 @@ Vaadin Flow is een framework om moderne web apps en websites te bouwen. Het zorg
 
 De grootste voordelen van Vaadin Flow zijn de volgende:
 \begin{itemize}
-	\item Een reeks voorgedefinieerde user interface componenten.
-	\item abstractielagen die ervoor zorgen dat zelfgemaakte componenten eenvoudig hergebruikt kunnen worden.
-	\item Two-Way Data binding API
-	\item Router API
+	\item een reeks voorgedefinieerde user interface componenten;
+	\item abstractielagen die ervoor zorgen dat zelfgemaakte componenten eenvoudig hergebruikt kunnen worden;
+	\item two-way data binding API;
+	\item router API;
 \end{itemize}
 
 \subsection{Component}
@@ -251,12 +252,12 @@ Om deze data conversie te bekomen moet men een Converter aanmaken. Deze Converte
 Routing gebeurt in Vaadin aan de hand van de Router klasse. De router zorgt ervoor dat de juiste content wordt weergegeven wanneer een gebruiker navigeert binnen de applicatie. Elke component kan als route ingesteld worden via de @Route annotatie. 
 Het pad naar deze component kan als argument meegegeven worden aan de annotatie, bijvoorbeeld: @Route("docs/hello").
 
-\textbf{Navigatie Lifecycle} \hspace{1cm} De navigatie lifecycle bestaat uit een aantal evenementen die gebeuren wanneer een user navigeert van één view naar een andere. Deze zullen hieronder kort besproken worden in volgorde waarin ze voorkomen. 
+\textbf{Navigatie Lifecycle} \hspace{1cm} De navigatie lifecycle bestaat uit een aantal evenementen die gebeuren wanneer een user navigeert van een view naar een andere. Deze zullen hieronder kort besproken worden in volgorde waarin ze voorkomen. 
 
 \begin{itemize}
-	\item BeforeLeaveEvent: Deze lifecycle kan de navigatie uitstellen, annuleren of veranderen naar een andere bestemming. Dit kan bijvoorbeeld handig zijn wanneer er aan de gebruiker gevraagd moet worden of ze hun niet-opgeslagen veranderingen willen opslaan voordat ze navigeren naar een andere view. 
-	\item BeforeEnterEvent: Dit evenement kan de navigatie veranderen naar een bestemming die verschilt van de originele. Op deze wijze kan men reageren op speciale situaties, zoals wanneer er geen data is om weer te geven of wanneer de gebruiker niet over de gepaste permissies beschikt.
-	\item AfterNavigationEvent: In dit evenement worden delen van de user interface geüpdatet nadat de navigatie volbracht is. Dit kan gebruikt worden om het menu item dat actief is te markeren in een andere kleur.
+	\item BeforeLeaveEvent: deze lifecycle kan de navigatie uitstellen, annuleren of veranderen naar een andere bestemming. Dit kan bijvoorbeeld handig zijn wanneer er aan de gebruiker gevraagd moet worden of ze hun niet-opgeslagen veranderingen willen opslaan voordat ze navigeren naar een andere view; 
+	\item BeforeEnterEvent: dit evenement kan de navigatie veranderen naar een bestemming die verschilt van de originele. Op deze wijze kan men reageren op speciale situaties, zoals wanneer er geen data is om weer te geven of wanneer de gebruiker niet over de gepaste permissies beschikt;
+	\item AfterNavigationEvent: in dit evenement worden delen van de user interface geüpdatet nadat de navigatie volbracht is. Dit kan gebruikt worden om het menu item dat actief is te markeren in een andere kleur.
 \end{itemize}
 
 \textbf{RouterLink component} \hspace{1cm} De RouterLink component kan content van een nieuwe component ophalen zonder de pagina te herladen. De pagina wordt geüpdatet wat veel sneller gaat dan een nieuwe pagina te laden. 

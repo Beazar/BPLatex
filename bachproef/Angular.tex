@@ -6,26 +6,26 @@ In de afgelopen jaren is de ontwikkeling van mobiele applicaties een "booming bu
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\linewidth]{Native-Web-progressive}
+	\includegraphics[width=0.9\linewidth]{Native-Web-progressive}
 	\caption{Native App vs Responsive App vs Progressive App \autocite{Solis2018}}
 	\label{fig:native-responsive-web}
 \end{figure}
 Bij het ontwikkelen van een mobiele applicatie heeft de ontwikkelaar drie opties(zie figuur \ref{fig:native-responsive-web}):
 \begin{itemize}
-	\item Responsive webapplicaties: De webapplicatie zal zich aanpassen aan het device waarop de applicatie wordt gedraaid. Deze aanpak is kostefficiënt omdat er maar een applicatie moet gebouwd worden voor zowel desktop als mobiele gebruikers. Verder is er geen download nodig, aangezien de webapplicaties gewoon via de browser kan opgeroepen worden.
-	\item Native applicatie: De applicatie wordt specifiek gebouwd voor native platformen zoals iOS of Android. De voordelen van native applicaties is dat ze een betere performantie hebben, offline beschikbaar zijn en push notificaties kunnen sturen. Anderzijds moet elke applicatie gebouwd en getest worden voor elk ondersteund platform.
-	\item Progressive webapplicaties(PWA):  Progressive webapplicaties zijn websites gebouwd met webtechnologie die zich gedragen als een app. Ze zijn de opvolgers van de hybride applicatie(een downloadbare app die de browser opstart en toont zonder navigatie) maar in tegenstelling tot de hybride applicatie vereisen ze geen download. Net als de native applicaties kunnen ze geraadpleegd worden zonder internetverbinding en kunnen ze push notificaties uitsturen. 
+	\item Responsive webapplicaties: de webapplicatie zal zich aanpassen aan het device waarop de applicatie wordt gedraaid. Deze aanpak is kostefficiënt omdat er maar een applicatie moet gebouwd worden voor zowel desktop als mobiele gebruikers. Verder is er geen download nodig, aangezien de webapplicaties gewoon via de browser kan opgeroepen worden;
+	\item Native applicatie: de applicatie wordt specifiek gebouwd voor native platformen zoals iOS of Android. De voordelen van native applicaties is dat ze een betere performantie hebben, offline beschikbaar zijn en push notificaties kunnen sturen. Anderzijds moet elke applicatie gebouwd en getest worden voor elk ondersteund platform;
+	\item Progressive webapplicaties(PWA):  progressive webapplicaties zijn websites gebouwd met webtechnologie die zich gedragen als een app. Ze zijn de opvolgers van de hybride applicatie(een downloadbare app die de browser opstart en toont zonder navigatie) maar in tegenstelling tot de hybride applicatie vereisen ze geen download. Net als de native applicaties kunnen ze geraadpleegd worden zonder internetverbinding en kunnen ze push notificaties uitsturen. 
 \end{itemize}
 
 Vaadin en Angular hebben zeer verschillende aanpakken met betrekking tot mobiele ondersteuning. Waar de focus van Vaadin op het web ligt, zorgt Angular voor herbruikbaarheid van delen van de applicatie om mobiele applicaties te bouwen.
 \subsection{Angular}
 De ontwikkelaar heeft verschillende keuzes wanneer hij een mobiele applicatie wil ontwikkelen met Angular. Hij kan zowel een responsive webapplicatie als een progressive webapplicatie maken. Hij kan zelfs een native applicatie maken wanneer hij de template maakt met NativeScript in plaats van HTML. 
 
-Het responsief maken van de applicatie gebeurt aan de hand van CSS media query's. Deze media query's staan de ontwikkelaar toe om verschillende regels voor de layout toe te voegen afhankelijk van de grootte van het scherm van het device. Verder kunnen de ontwikkelaars ook listeners toevoegen in de TypeScript code die reageren veranderingen in de grootte van het scherm. Zo kunnen bepaalde componenten veranderd worden als de grootte van het scherm verandert. 
+Het responsief maken van de applicatie gebeurt aan de hand van CSS media query's. Deze media query's staan de ontwikkelaar toe om verschillende regels voor de layout toe te voegen afhankelijk van de grootte van het scherm van het device. Verder kunnen de ontwikkelaars ook listeners toevoegen in de TypeScript code die reageren op veranderingen in de grootte van het scherm. Zo kunnen bepaalde componenten veranderd worden als de grootte van het scherm verandert. 
 
 \subsection{Vaadin}
 Wanneer de ontwikkelaar ervoor kiest om de mobiele applicatie te bouwen in Vaadin heeft hij twee keuzes: een responsive webapplicatie of een progressive webapplicatie. 
-Voor het ontwikkelen van een progressive webapplicatie zijn er vanuit technisch standpunt twee dingen noodzakelijk: een  Web App Manifest file en een ServiceWorker JavaScript file. De manifest file zorgt voor metadata zoals kleuren en iconen voor operating system integratie, de ServiceWorker zorgt voor caching en push notificaties.
+Voor het ontwikkelen van een progressive webapplicatie zijn er vanuit technisch standpunt twee dingen noodzakelijk: een  Web App manifest file en een ServiceWorker JavaScript file. De manifest file zorgt voor metadata zoals kleuren en iconen voor operating system integratie, de ServiceWorker zorgt voor caching en push notificaties.
 Terwijl de ServiceWorker en de manifest file in Angular automatisch worden aangemaakt, moeten deze bij Vaadin manueel aangemaakt worden. Verder zal de applicatie ook niet offline beschikbaar zijn aangezien de application state wordt bijgehouden door de server.
 Dit leidt ertoe dat het opzetten van een progressive webapplicatie in Vaadin moeilijker is en langer duurt.  
 Vanaf de volgende versie van Vaadin (Vaadin 13) zou de ServiceWorker en de manifest file echter wel aan het framework toegevoegd worden. 
@@ -158,10 +158,36 @@ Aangezien dit maar een heel klein verschil betreft en beide frameworks in essent
 Testen is een belangrijk onderdeel bij het bouwen van robuuste applicaties. Het zorgt ervoor dat fouten in de code op tijd worden opgevangen en geeft de ontwikkelaar vertrouwen in de werking van zijn applicatie. We zullen in dit onderdeel de focus leggen op UI tests aangezien andere tests niet framework specifiek zijn maar gebeuren aan de hand van gestandardiseerde tools zoals JUnit voor Java of Jasmine voor JavaScript.
 
 \subsection{Angular}
+\subsubsection{Individuele componenten}
+Componenten testen is vrij moeilijk in Angular. De ontwikkelaar moet de afhankelijkheden van de componenten gaan mocken. Hiervoor is een redelijk uitgebreide kennis van de werking van Angular noodzakelijk. De ontwikkelaar zal ook manueel de DOM events moeten starten voor input events of click events. 
+Dit leidt tot langere en meer complexe tests. De tests maken gebruik van Jasmine en  Angular testing utilities. De Angular testing utilities bestaan uit onder meer:
+\begin{itemize}
+	\item TestBed: configureert een module voor de test omgeving;
+	\item ComponentFixture: een mal voor het debuggen en testen van een component.
+\end{itemize}
+
+De eerste stap om een Angular component te testen is het configureren van een test module met de correcte afhankelijkheden en imports.
+Daarna volgt het schrijven van de tests zelf. Jasmine kan gebruikt worden om interacties te verifiëren en de gewenste waardes te retourneren. 
+
+\subsubsection{End-to-end testen}
+Angular maakt gebruik van Protractor voor end-to-end tests. Protractor is gebaseerd op Selenium. Het wordt automatisch opgezet wanneer een project gecreëerd wordt met Angular CLI.
+Angular CLI maakt het bovendien eenvoudig om end-to-end testen te runnen met het ng e2e command.
 
 \subsection{Vaadin}
+\subsubsection{Individuele componenten}
+Het testen van componenten is eenvoudig in Vaadin. Aangezien de componenten enkel bestaan uit Java code kan er gebruik gemaakt worden van Java testing tools zoals JUnit. Als de geteste onderdelen afhankelijkheden bevatten kan er gebruik gemaakt worden van van tools zoals Mockito of EasyMock om deze te mocken. 
+
+\subsubsection{End-to-end testen}
+De end-to-end tests in Vaadin worden geschreven met Vaadin TestBench. Dit moet toegevoegd worden aan het project als een afhankelijkheid. Bovenop deze installatie moet de ontwikkelaar ook een Selenium browser driver installeren. 
+Wanneer de TestBench is opgezet kunnen de tests geschreven worden als JUnit tests die gebruik maken van TestBench of Selenium API's voor het vinden en interageren met DOM elementen. 
 
 \subsection{Conclusie}
+De individuele componenten testen is opvallend makkelijker in Vaadin dan in Angular omdat er bij Vaadin geen opzet van de componenten nodig is. 
+
+Voor de end-to-end testen zijn de resultaten voor beide frameworks gelijkaardig. Dit komt omdat zowel Vaadin TestBench als Protractor gebaseerd zijn op Selenium. 
+Angular heeft echter wel het voordeel dat Protractor automatisch opgezet wordt wanneer een project wordt aangemaakt met de Angular CLI.
+
+Om te concluderen kan er gesteld dat beide frameworks heel goed testbaar zijn. Vaadin heeft echter een groot voordeel, namelijk dat er enkel Java code getest dient te worden. Daarom krijgt Vaadin een score van 5, terwijl Angular een score krijgt van 4. 
 
 \section{ Componenten}
 Voorgemaakte componenten kunnen de ontwikkelaar heel veel tijd besparen. Ze zorgen bovendien ook voor een propere en consistente layout. Daarom wordt er in dit onderdeel ingegaan op het aantal beschikbare open source componenten. Deze componenten kunnen zowel aangeboden worden door de ontwikkelaars van het framework zelf als door een third party.
@@ -219,6 +245,8 @@ In dit onderdeel worden de groottes van de request die gedownload worden in de a
 		\textbf{Aantal requests} & \textbf{Grootte} & \textbf{Resources} & \textbf{Tijd om te laden} \\ \hline
 		13                       & 2.5KB            & 5.3MB resources    & 967 ms                    \\ \hline
 	\end{tabular}
+\caption{Requests Angular}
+\label{table:angularRequests}
 \end{table}
 \subsubsection{Vaadin}
 \begin{table}[H]
@@ -227,15 +255,83 @@ In dit onderdeel worden de groottes van de request die gedownload worden in de a
 		\textbf{Aantal requests} & \textbf{Grootte} & \textbf{Resources} & \textbf{Tijd om te laden} \\ \hline
 		17                       & 12.9 KB          & 1.6MB resources    & 278 ms                    \\ \hline
 	\end{tabular}
+\caption{Requests Vaadin}
+\label{table:vaadinRequests}
 \end{table}
 
 \subsection{Gebruik processor}
-
+Het CPU gebruik van de Chrome tab in de task manager is een indicatie over hoe zwaar de applicatie weegt op de processor. Hoe hoger dit getal, hoe meer resources de applicatie inneemt en dus hoe minder performant de applicatie is. Om een waarheidsgetrouw resultaat te bekomen wordt het gemiddelde genomen van vijf resultaten, die om de vijf seconden worden gemeten. 
 \subsubsection{Angular}
-524.9 MB
+\begin{table}[H]
+	\begin{tabular}{|l|l|l|l|l|l|}
+		\hline
+		\textbf{5 sec} & \textbf{10 sec} & \textbf{15 sec} & \textbf{20 sec} & \textbf{25 sec} & \textbf{Gemiddelde} \\ \hline
+		524.9 MB       & 362.5 MB        & 360.7 MB        & 359.3 MB        & 429.1 MB        & 407.3 MB            \\ \hline
+	\end{tabular}
+\caption{CPU gebruik Angular}
+\label{table:angularCPU}
+\end{table}
 
 \subsubsection{Vaadin}
-322.7 MB
+\begin{table}[H]
+	\begin{tabular}{|l|l|l|l|l|l|}
+		\hline
+		\textbf{5 sec} & \textbf{10 sec} & \textbf{15 sec} & \textbf{20 sec} & \textbf{25 sec} & \textbf{Gemiddelde} \\ \hline
+		322.7 MB       & 362.7 MB        & 355.2 MB        & 354.4 MB        & 353.8 MB        & 349.8 MB            \\ \hline
+	\end{tabular}
+\caption{CPU gebruik Vaadin}
+\label{table:vaadinCPU}
+\end{table}
+
+\subsection{Lighthouse Metrics}
+De software die in deze test zal gebruikt worden is de 'Lighthouse Audits' van de Google Chrome Developer Tools. Deze open-source tool staat bekend voor het verbeteren van de kwaliteit van webpagina's. Door het uitvoeren van een audit voor de performantie van de webpagina zijn resultaten voor volgende parameters beschikbaar:
+\begin{itemize}
+	\item First Contentful Paint: Tijd om eerste tekst of image te laden.
+	\item Speed Index: Tijd om de inhoud van de webpagina te vullen.
+	\item Time To Interactive: Tijd voordat de webpagina volledig interactief is.
+	\item First Meaningful Paint: Tijd tot wanneer de primary content van de webpagina beschikbaar is. 
+	\item First CPU Idle: Tijd tot waneer de main thread van de pagina klaar is om input te ontvangen. 
+	\item Estimated Input Latency: Schatting van hoe lang het duurt eer de applicatie reageert op input van de gebruiker.
+\end{itemize}
+Deze test zal tien keer uitgevoerd worden om tot betrouwbare resultaten te komen.De resultaten hieronder zijn een gemiddelde van de tien testresultaten.  
+
+\subsubsection{Angular}
+\begin{table}[H]
+	\begin{tabular}{|l|l|}
+		\hline
+		\textbf{Metric}         & \textbf{Gemiddelde tijd} \\ \hline
+		First Contentful Paint  & 1.0 sec                  \\ \hline
+		Speed Index             & 6.2 sec                  \\ \hline
+		Time to Interactive     & 4.9 sec                  \\ \hline
+		First Meaningful Paint  & 2.6 sec                  \\ \hline
+		First CPU Idle          & 4.6 sec                  \\ \hline
+		Estimated Input Latency & 250 ms                   \\ \hline
+	\end{tabular}
+\caption{Lighthouse Metrics Angular}
+\label{table:angularLighthouse}
+\end{table}
+\subsubsection{Vaadin}
+
+\begin{table}[H]
+	\begin{tabular}{|l|l|}
+		\hline
+		\textbf{Metric}         & \textbf{Gemiddelde tijd} \\ \hline
+		First Contentful Paint  & 1.0 sec                  \\ \hline
+		Speed Index             & 3.2 sec                  \\ \hline
+		Time to Interactive     & 2.2 sec                  \\ \hline
+		First Meaningful Paint  & 1.5 sec                  \\ \hline
+		First CPU Idle          & 2.1 sec                  \\ \hline
+		Estimated Input Latency & 290 ms                   \\ \hline
+	\end{tabular}
+\caption{Lighthouse Metrics Vaadin}
+\label{table:vaadinLighthouse}
+\end{table}
+
+\subsection{Conclusie}
+Voorgaande tests wijzen uit dat Vaadin duidelijk beter scoort dan Angular op vlak van performantie. De requests worden bijna drie keer zo snel geladen, de belasting op de CPU ligt 15 percent lager en het scoort beter op zowat elke parameter van Lighthouse Audit. Bovendien hebben de ontwikkelaars van Vaadin in een artikel van 5 december 2018 \autocite{vaadin122018} vermeld dat de performantie nog verbeterd zal worden met de release van Vaadin 12. 
+Er zijn echter wel onderdelen waar Angular beter op scoort dan Vaadin, maar die hierboven niet genoemd worden. Zo zal bijvoorbeeld het valideren van een formulier sneller gaan in Angular. De reden hiervoor is eenvoudig: de validatie in Angular gebeurt in een client-side TypeScript functie. Dit in tegenstelling tot Vaadin waarbij een server-side Java Validator moet worden opgeroepen.
+
+Door bovenstaande redenen krijgt Vaadin een score van 4 en Angular een score van 2. 
 
 \section{Documentatie}
 Het documenteren van frameworks is een belangrijk proces in de ontwikkeling van applicatie frameworks. Het is een voorwaarde die vervuld moet worden om een framework op een kwaliteitsvolle manier te kunnen gebruiken. Deze documentatie moet niet enkel uitgebreid zijn, maar ook makkelijk begrijpbaar, accuraat en up-to-date zijn. Goede documentatie is bovendien dynamisch: het maakt gebruik van geavanceerde visualisatie technieken zoals voorbeeldcode, afbeeldingen en video's. Dit in tegenstelling tot de verouderde statische documentatie zoals die de opbouw van een kookboek volgen. 
@@ -263,17 +359,12 @@ Hoewel de documentatie van Angular een pak groter is dan die van Vaadin kan er n
 
 Beide frameworks verwerken geen video's of audiofragmenten in hun documentatie, die bovendien niet offline beschikbaar is. Hierdoor krijgen beide frameworks een score van 3.
 
-
-\section{Aantal programmeertalen}
-
-
-
 \section{Populariteit}
-De populariteit is een belangrijk criterium bij het beoordelen van een framework. Een framework met veel gebruikers heeft een grote community, waardoor het vinden van oplossingen bij problemen makkelijker verloopt dan bij een framework met een kleine community. Daarenboven bepaalt het aantal gebruikers ook de stabiliteit van een framework. Ten slotte bepaalt de populariteit ook het aantal library's die door de community ter beschikking gesteld worden.
+De populariteit is een belangrijk criterium bij het beoordelen van een framework. Een framework met veel gebruikers heeft een grote community, waardoor het vinden van oplossingen bij problemen makkelijker verloopt dan bij een framework met een kleine community. Daarenboven bepaalt het aantal gebruikers ook de stabiliteit en continuïteit van een framework. Ten slotte bepaalt de populariteit ook het aantal library's die door de community ter beschikking gesteld worden.
 \subsection{Stack Overflow}
 Stack Overflow is een platform dat als doel heeft om programmeurs te voorzien van een goede Q\&A website. Maandelijks heeft Stack Overflow meer dan 50 miljoen bezoekers waardoor het de grootste online developer community genoemd mag worden. 
 \subsubsection{Angular}
-Zie tabel \ref{table:angularstackoverflow}(raadpleging op 8/04/2019) op pagina \pageref{table:angularstackoverflow}. \\ \\
+Zie tabel \ref{table:angularstackoverflow} (raadpleging op 8/04/2019) op pagina \pageref{table:angularstackoverflow}. \\ \\
 Angular heeft een heel groot aantal aangemaakte issues wat erop wijst dat Angular een zeer populair framework is. Het percentage opgeloste issues ligt rond de 60 percent, wat een redelijk goede score is.
 \begin{table}[H]
 	\begin{tabular}{|l|l|l|l|}
@@ -289,7 +380,7 @@ Angular heeft een heel groot aantal aangemaakte issues wat erop wijst dat Angula
 \label{table:angularstackoverflow}
 \end{table}
 \subsubsection{Vaadin}
-Zie tabel \ref{table:vaadinstackoverflow}(raadpleging op 8/04/2019) op pagina \pageref{table:vaadinstackoverflow}. \\ \\
+Zie tabel \ref{table:vaadinstackoverflow} (raadpleging op 8/04/2019) op pagina \pageref{table:vaadinstackoverflow}. \\ \\
 Het aantal aangemaakte issues van Vaadin ligt laag. Dit wijst erop dat Vaadin niet veel gebruikers heeft. Het percentage opgeloste issues ligt echter zeer hoog, namelijk rond de 84 percent. Ondanks de kleinere omvang van community is de kans op een oplossing van een issue dus toch groot. \\
 
 \begin{table}[H]
@@ -329,7 +420,7 @@ Elk jaar voert Stack Overflow zijn Developer Survey \autocite{DeveloperSurvey201
 \subsubsection{Resultaten 2017}
 In 2017 was Angular het tweede meest gebruikte framework, met maar liefst 44 percent van de respondenten die reeds het framework gebruikt hadden. Bovendien vonden meer dan de helft van de gebruikers het een leuk framework om te gebruiken.
 
-Vaadin werd niet genoemd in deze enquête wat erop wijst dat het in 2017 geen populair.
+Vaadin werd niet genoemd in deze enquête wat erop wijst dat het in 2017 geen populair framework was.
 
 \begin{figure}[H]
 	\centering
