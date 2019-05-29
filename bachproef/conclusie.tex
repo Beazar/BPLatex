@@ -11,5 +11,56 @@
 %% over het resultaat. Had je deze uitkomst verwacht? Zijn er zaken die nog
 %% niet duidelijk zijn? Heeft het onderzoek geleid tot nieuwe vragen die
 %% uitnodigen tot verder onderzoek?
+In dit onderzoek wordt een antwoord geformuleerd op de onderzoeksvraag 'In welke situatie kiest men best voor het Vaadin framework en wanneer opteert men best voor Angular?'. Hiervoor is een vergelijkend onderzoek uitgevoerd aan de hand van een aantal requirements. De antwoorden op de verschillende deelonderzoekvragen werden al geformuleerd in de verscheidene conclusies in hoofdstuk \ref{ch:angular} aan de hand van een score die werd toegekend aan elk framework.
+
+Deze resultaten scores worden in tabel \ref{table:conclusieTabel} samengevat. De resultaten van elk onderdeel worden onderworpen aan een wegingsfactor. Requirements die in hoofdstuk \ref{ch:methodologie} werden aangeduid als 'Must-have initiatives' krijgen een wegingsfactor van 3, requirements met het label 'Should-have initiatives' krijgen een wegingsfactor van 2 en de 'Could-have initiatives' hebben een wegingsfactor van 1.\\
+Dankzij deze wegingsfactoren wegen de belangrijkste requirements van een framework zwaarder door dan de minder belangrijke requirements.
 
 
+
+
+\begin{table}[H]
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\multicolumn{1}{|c|}{\textbf{Requirement}}                & \textbf{Angular} & \textbf{Vaadin} \\ \hline
+		\multicolumn{3}{|c|}{\textbf{Must-have initiatives}}                                           \\ \hline
+		Ondersteuning voor mobile                                 & 4                & 2               \\ \hline
+		Compatibiliteit met verschillende browsers                & 5                & 5               \\ \hline
+		Ondersteuning voor data binding                           & 3                & 3               \\ \hline
+		Moet open source zijn                                     & 5                & 5               \\ \hline
+		Moet een populair framework zijn met een grote community  & 5                & 2               \\ \hline
+		\textbf{Totaal must-have initiatives}                     & \textbf{22}      & \textbf{17}     \\ \hline
+		\textbf{Wegingsfactor}                                    & \textbf{3}       & \textbf{3}      \\ \hline
+		\textbf{Totaal must-have initiatives met wegingsfactor}   & \textbf{66}      & \textbf{51}     \\ \hline
+		\multicolumn{3}{|c|}{\textbf{Should-have initiatives}}                                         \\ \hline
+		Uitgebreide mogelijkheden rond testing                    & 4                & 5               \\ \hline
+		Beschikbare voorgedefiniëerde componenten                 & 5                & 3               \\ \hline
+		Goede performantie                                        & 2                & 4               \\ \hline
+		Moet over een goede documentatie beschikken               & 3                & 3               \\ \hline
+		\textbf{Totaal should-have initiatives}                   & \textbf{14}      & \textbf{15}     \\ \hline
+		\textbf{Wegingsfactor}                                    & \textbf{2}       & \textbf{2}      \\ \hline
+		\textbf{Totaal should-have initiatives met wegingsfactor} & \textbf{28}      & \textbf{30}     \\ \hline
+		\multicolumn{3}{|c|}{\textbf{Could-have initiatives}}                                          \\ \hline
+		Moet relatief makkelijk aan te leren zijn				  & 2                & 4               \\ \hline
+		\textbf{Totaal could-have initiatives}                    & \textbf{2}       & \textbf{4}      \\ \hline
+		\textbf{Wegingsfactor}                                    & \textbf{1}       & \textbf{1}      \\ \hline
+		\textbf{Totaal could-have initiatives met wegingsfactor}  & \textbf{2}       & \textbf{4}      \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Totaal}}                     & \textbf{96}      & \textbf{85}     \\ \hline
+	\end{tabular}
+\caption{Overzicht score Angular versus Vaadin}
+\label{table:conclusieTabel}
+\end{table}
+
+Uit de bovenstaande tabel kan met een eerste oogopslag geconcludeerd worden dat Angular een beter framework is dan Vaadin. Toch is dit net iets te kort door de bocht.
+Beide frameworks  zijn goed en bevatten alle onderdelen die een goed framework moet bezitten.
+
+Voor kleine projecten kan de keuze bepaald worden door de programmeur zelf. Voor beginnende programmeurs zal het makkelijker zijn om om een applicatie in Vaadin te maken aangezien er dan enkel kennis van Java nodig is. Dit terwijl er voor Angular kennis van HTML, CSS en TypeScript nodig is. Indien deze applicatie echter mobiele ondersteuning moet bieden, is Angular de betere optie.
+
+Voor grotere projecten kan er best geopteerd worden voor Angular. De reden hiervoor is dat Angular, dankzij zijn grote community, makkelijker oplossing kan bieden bij problemen. Bovendien is het kiezen voor Angular ook een keuze voor continuïteit. Dankzij de grote community en regelmatige updates is de kans dat de ondersteuning voor dit framework stopt eerder klein. Indien een groot project wordt opgebouwd in Vaadin en dit framework niet langer ondersteund wordt kan dit een grote kost betekenen voor de eigenaar van het project. 
+\\\\
+
+De resultaten van dit onderzoek liggen grotendeels in lijn met verwachtingen die voorafgaand aan het onderzoek werden opgesteld in het onderzoeksvoorstel (zie bijlage). Angular scoort inderdaad beter qua mobile support en de voorspelling dat de performantie van Vaadin beter zou zijn dan die van Angular klopt ook. Verder is de scholing van de programmeur inderdaad een belangrijke factor in de keuze van het framework, net als de schaalbaarheid van het project. Toch zijn er in dit onderzoek een aantal verrassingen naar boven gekomen, zoals het verschil in grootte van de community van beide frameworks of het verschil in het maken van tests.
+
+Dit onderzoek biedt een meerwaarde voor bedrijven die op zoek zijn naar een passend framework voor het opbouwen van een web applicatie of een mobiele applicatie. Deze scriptie biedt nog veel ruimte voor verder onderzoek. Eerst en vooral kan de vergelijking verder getrokken worden naar andere component-gebaseerde frameworks zoals React of Vue.js.   
+Een tweede optie voor verder onderzoek zou eruit bestaan om het verschil in performantie tussen de frameworks verder uit te pluizen. Dit viel buiten de scope van dit onderzoek. 
+Ten slotte kan er op dit onderzoek verder gebouwd worden door een nieuw onderzoek uit te voeren na de release van Vaadin 14 (5 juni 2019) en Angular 9 (oktober/november 2019).

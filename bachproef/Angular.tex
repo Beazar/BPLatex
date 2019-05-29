@@ -111,18 +111,6 @@ Geen standaard implementatie, de ontwikkelaar moet dit zelf schrijven.
 \subsubsection{Conclusie}
 Beide frameworks hebben een eenvoudige implementatie van zowel one-way als two-way data binding. Beide frameworks kunnen zich nog verbeteren door het implementeren van three-way data binding en four-way data binding te vereenvoudigen. Hierdoor krijgen beide frameworks een score van 3. 
 
-\section{Moeilijkheidsgraad}
-Het aanleren van een framework is niet altijd eenvoudig. Hoe sneller een developer een framework onder de knie kan krijgen hoe beter. 
-Angular is vrij moeilijk om aan te leren: de programmeur moet namelijk drie verschillende talen leren.
-Eerst en vooral moet hij TypeScript leren. Hiervoor heeft hij een voorkennis nodig van JavaScript. Daarenboven moet hij ook een uitgebreide kennis hebben van HTML en CSS voor het maken en stylen van de templates.
-\\
-In tegenstelling tot Angular is Vaadin veel eenvoudiger om te leren. De programmeur moet enkel Java kennen, kennis van HTML en CSS is een pluspunt maar niet noodzakelijk.
-Doordat er enkel kennis van Java nodig is, is Vaadin een framework dat gemakkelijk aangeleerd kan worden door programmeurs die geen ervaring hebben in de web-development sector.
-
-\subsection{Conclusie}
-Angular is een vrij moeilijk framework om aan te leren doordat de programmeur drie talen moet kennen. Vaadin is makkelijker onder de knie te krijgen aangezien applicaties geschreven kunnen worden met kennis van één taal, namelijk Java. 
-Voor deze reden krijgt Vaadin een score van 4 en Angular een score van 2.
-
 
 \section{Open source}
 Open source software is software waarvan de broncode is gepubliceerd en vrij te gebruiken is voor het publiek. Iedereen kan op die manier kopiëren, aanpassen en verspreiden zonder kosten te betalen voor auteursrechten.
@@ -153,6 +141,154 @@ Vaadin voorziet ook open source componenten onder de naam Vaadin core components
 De MIT-licentie van Angular is kort en zeer eenvoudig. Alles mag aangepast worden aan de broncode op voorwaarde dat de originale licentie aanwezig blijft. 
 De Apache License, version 2.0 waaronder Vaadin valt is net als de MIT-licentie een licentie dat heel veel toelaat. Het enige nadeel ten opzichte van de MIT-licentie is dat wanneer iets aangepast wordt aan de Apache-licensed code dit ook steeds moet aangegeven worden.
 Aangezien dit maar een heel klein verschil betreft en beide frameworks in essentie volledig open source zijn, krijgen ze beiden de maximumscore van 5 op dit onderdeel.
+
+\section{Populariteit}
+De populariteit is een belangrijk criterium bij het beoordelen van een framework. Een framework met veel gebruikers heeft een grote community, waardoor het vinden van oplossingen bij problemen makkelijker verloopt dan bij een framework met een kleine community. Daarenboven bepaalt het aantal gebruikers ook de stabiliteit en continuïteit van een framework. Ten slotte bepaalt de populariteit ook het aantal library's die door de community ter beschikking gesteld worden.
+\subsection{Stack Overflow}
+Stack Overflow is een platform dat als doel heeft om programmeurs te voorzien van een goede Q\&A website. Maandelijks heeft Stack Overflow meer dan 50 miljoen bezoekers waardoor het de grootste online developer community genoemd mag worden. 
+\subsubsection{Angular}
+Zie tabel \ref{table:angularstackoverflow} (raadpleging op 8/04/2019) op pagina \pageref{table:angularstackoverflow}. \\ \\
+Angular heeft een heel groot aantal aangemaakte issues wat erop wijst dat Angular een zeer populair framework is. Het percentage opgeloste issues ligt rond de 60 percent, wat een redelijk goede score is.
+\begin{table}[H]
+	\begin{tabular}{|l|l|l|l|}
+		\hline
+		Naam van de tag   & \textbf{Aantal aangemaakte issues} & \textbf{Aantal onopgeloste issues} & \textbf{\% opgeloste issues} \\ \hline
+		\textbf{Angular}  & 161.326                            & 65.823                             & 59,20\%                              \\ \hline
+		\textbf{Angular5} & 2.827                              & 1.193                              & 57,80\%                              \\ \hline
+		\textbf{Angular6} & 2.763                              & 1.181                              & 57,26\%                              \\ \hline
+		\textbf{Angular7} & 723                                & 320                                & 55,74\%                              \\ \hline
+		\textbf{Totaal}   & \textbf{167.639}                   & \textbf{68.517}                    & \textbf{59.13\%}                     \\ \hline
+	\end{tabular}
+	\caption{Populariteit van Angular op Stack Overflow}
+	\label{table:angularstackoverflow}
+\end{table}
+\subsubsection{Vaadin}
+Zie tabel \ref{table:vaadinstackoverflow} (raadpleging op 8/04/2019) op pagina \pageref{table:vaadinstackoverflow}. \\ \\
+Het aantal aangemaakte issues van Vaadin ligt laag. Dit wijst erop dat Vaadin niet veel gebruikers heeft. Het percentage opgeloste issues ligt echter zeer hoog, namelijk rond de 84 percent. Ondanks de kleinere omvang van community is de kans op een oplossing van een issue dus toch groot. \\
+
+\begin{table}[H]
+	\begin{tabular}{|l|l|l|l|}
+		\hline
+		Naam van de tag   & \textbf{Aantal aangemaakte issues} & \textbf{Aantal onopgeloste issues} & \textbf{\% opgeloste issues} \\ \hline
+		\textbf{Vaadin}  & 4.588                            & 691                             & 84,94\%                              \\ \hline
+		\textbf{Vaadin6} & 9                              & 1                              & 88,89\%                              \\ \hline
+		\textbf{Vaadin7} & 386                              & 85                              & 77,98\%                              \\ \hline
+		\textbf{Vaadin8} & 166                                & 49                                & 70,48\%                              \\ \hline
+		\textbf{Vaadin10} & 36                                & 12                                & 66,66\%                              \\ \hline
+		\textbf{Totaal}   & \textbf{5.185}                   & \textbf{838}                    & \textbf{83.84\%}                     \\ \hline
+	\end{tabular}
+	\caption{Populariteit van Vaadin op Stack Overflow}
+	\label{table:vaadinstackoverflow}
+\end{table}
+
+\subsection{Reddit}
+Reddit is een social sharing website waarbij gebruikers zelf de content aanleveren. Dit kunnen zowel artikels als afbeeldingen of video's zijn. Reddit bestaat uit verschillende subreddits die handelen over bepaalde onderwerpen. Het aantal subscribers van deze subreddits kunnen een indicator vormen voor de populariteit van het onderwerp.\\
+
+Uit de gegevens van tabel \ref{table:reddit} kunnen we afleiden dat Angular veel populairder is dan Vaadin. Met meer dan 200 keer meer subscribers is het verschil zeer duidelijk. Bovendien is de subreddit r/vaadin ook veel minder actief dan r/angular.
+\begin{table}[H]
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{Subreddit}  & \textbf{Aantal subscribers} & \textbf{Aantal posts in de laatste 30 dagen} \\ \hline
+		\textbf{r/angular2} & 31.468                      & 79                                           \\ \hline
+		\textbf{r/vaadin}   & 147                         & 0                                            \\ \hline
+	\end{tabular}
+	\caption{Populariteit van de frameworks op Reddit}
+	\label{table:reddit}
+\end{table}
+
+\subsection{Stack Overflow Developer Survey}
+Elk jaar voert Stack Overflow zijn Developer Survey \autocite{DeveloperSurvey2019} uit, waarbij duizenden developers vertellen over wat ze leren, welke tools en frameworks ze gebruiken en welke job ze uitvoeren. De resultaten hiervan kunnen gebruikt worden om de populariteit te bepalen van deze onderdelen. Door de resultaten de afgelopen jaren te gebruiken kan men bovendien een inzicht krijgen in de evolutie van de populariteit.
+
+
+\subsubsection{Resultaten 2017}
+In 2017 was Angular het tweede meest gebruikte framework, met maar liefst 44 percent van de respondenten die reeds het framework gebruikt hadden. Bovendien vonden meer dan de helft van de gebruikers het een leuk framework om te gebruiken.
+
+Vaadin werd niet genoemd in deze enquête wat erop wijst dat het in 2017 geen populair framework was.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{2017Frameworks}
+	\caption{Frameworks, Libraries, and Other Technologies 2017 \autocite{DeveloperSurvey2017}}
+	\label{fig:Frameworks, Libraries, and Other Technologies 2017}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{2017LovedFrameworks}
+	\caption{Most Loved Frameworks, Libraries and Other Technologies 2017 \autocite{DeveloperSurvey2017}}
+	\label{fig:Most Loved Frameworks, Libraries and Other Technologies 2017}
+\end{figure}
+
+\subsubsection{Resultaten 2018}
+In 2018 was Angular nog steeds het tweede meest gebruikte framework, maar het aantal respondenten die er al gebruik van gemaakt hadden daalde naar 37 percent. Nog steeds vonden meer dan de helft van de gebruikers het een leuk framework om te gebruiken.
+
+Vaadin werd niet genoemd in deze enquête wat erop wijst dat het in 2018 geen populair framework was.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{2018Frameworks}
+	\caption{Frameworks, Libraries, and Other Technologies 2018 \autocite{DeveloperSurvey2018}}
+	\label{fig:Frameworks, Libraries, and Other Technologies 2018}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{2018LovedFrameworks}
+	\caption{Most Loved Frameworks, Libraries and Other Technologies 2018 \autocite{DeveloperSurvey2018}}
+	\label{fig:Most Loved Frameworks, Libraries and Other Technologies 2018}
+\end{figure}
+
+\subsubsection{Resultaten 2019}
+De daling van de populariteit van Angular zette zich ook in 2019 verder. Het zakte van de tweede naar de derde plaats van populairste framework. Het aantal respondenten die gebruik maakten van het framework zakte naar 31 percent. Nochtans steeg het percentage van ontwikkelaars die er graag gebruik van maken naar 57 percent.
+
+Vaadin werd niet genoemd in deze enquête wat erop wijst dat het in 2019 geen populair framework is.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{2019Frameworks}
+	\caption{Frameworks, Libraries, and Other Technologies 2019 \autocite{DeveloperSurvey2019}}
+	\label{fig:Frameworks, Libraries, and Other Technologies 2019}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{2019LovedFrameworks}
+	\caption{Most Loved Frameworks, Libraries and Other Technologies 2019 \autocite{DeveloperSurvey2019}}
+	\label{fig:Most Loved Frameworks, Libraries and Other Technologies 2019}
+\end{figure}
+
+\subsection{Google Trends}
+
+Google Trends is een dienst van Google die via grafieken inzicht geeft wanneer en hoe vaak op een bepaald woord is gezocht met Google. \\ \\
+De cijfers in figuur \ref{fig:Google Trends zoektermen} geven de zoekinteresse aan ten opzichte van het hoogste punt in het diagram voor de betreffende regio en periode. Een waarde van 100 is de piekpopulariteit voor die term. Een waarde van 50 betekent dat de term half zo populair is. Een score van 0 betekent dat er onvoldoende gegevens beschikbaar zijn voor deze term. De resultaten van de zoekterm "Angular" worden weergegeven door een rode lijn, de resultaten van de zoekterm "Vaadin" door een blauwe lijn.
+
+Er kan geconcludeerd worden dat er wereldwijd veel vaker gezocht wordt naar het sleutelwoord "Angular" dan naar "Vaadin". 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{GoogleTrendsTimeLine}
+	\caption{Zoektermen Vaadin versus Angular \autocite{GoogleTrends2019}}
+	\label{fig:Google Trends zoektermen}
+\end{figure}
+
+\subsection{Github}
+GitHub is een populaire website waarop software kan geplaatst worden. GitHub is gebouwd rond het Git-versiebeheersysteem, waardoor GitHub alle mogelijkheden van Git en eigen toevoegingen aanbiedt. Het aantal watchers, stars en forks van een framework op Github is een indicator voor de populariteit van het framework. In tabel \ref{table:github} wordt nogmaals duidelijk dat Angular veel populairder is dan Vaadin.
+
+\begin{table}[H]
+	\begin{tabular}{|l|l|l|l|}
+		\hline
+		\textbf{Github}  & \textbf{Aantal watchers} & \textbf{Aantal stars} & \textbf{Aantal forks} \\ \hline
+		\textbf{Angular} & 3284                     & 47.296                & 12.612                \\ \hline
+		\textbf{Vaadin}  & 57                       & 184                   & 55                    \\ \hline
+	\end{tabular}
+	\caption{Populariteit van de frameworks op Github}
+	\label{table:github}
+\end{table}
+
+\subsection{Conclusie}
+Angular is duidelijk veel populairder dan Vaadin, waardoor het framework stabieler is en de gebruiker kan rekenen op meer ondersteuning vanuit de community. Angular behoort tot de meest populaire frameworks, terwijl Vaadin niet populair is. De enige factor waar Vaadin beter op scoort dan Angular is het percentage opgeloste issues op Stack Overflow. 
+
+Door de hierboven genoemde redenen krijgt Angular voor dit requirement een score van 5 en Vaadin een score van 2.
 
 \section{Testing}
 Testen is een belangrijk onderdeel bij het bouwen van robuuste applicaties. Het zorgt ervoor dat fouten in de code op tijd worden opgevangen en geeft de ontwikkelaar vertrouwen in de werking van zijn applicatie. We zullen in dit onderdeel de focus leggen op UI tests aangezien andere tests niet framework specifiek zijn maar gebeuren aan de hand van gestandardiseerde tools zoals JUnit voor Java of Jasmine voor JavaScript.
@@ -359,153 +495,19 @@ Hoewel de documentatie van Angular een pak groter is dan die van Vaadin kan er n
 
 Beide frameworks verwerken geen video's of audiofragmenten in hun documentatie, die bovendien niet offline beschikbaar is. Hierdoor krijgen beide frameworks een score van 3.
 
-\section{Populariteit}
-De populariteit is een belangrijk criterium bij het beoordelen van een framework. Een framework met veel gebruikers heeft een grote community, waardoor het vinden van oplossingen bij problemen makkelijker verloopt dan bij een framework met een kleine community. Daarenboven bepaalt het aantal gebruikers ook de stabiliteit en continuïteit van een framework. Ten slotte bepaalt de populariteit ook het aantal library's die door de community ter beschikking gesteld worden.
-\subsection{Stack Overflow}
-Stack Overflow is een platform dat als doel heeft om programmeurs te voorzien van een goede Q\&A website. Maandelijks heeft Stack Overflow meer dan 50 miljoen bezoekers waardoor het de grootste online developer community genoemd mag worden. 
-\subsubsection{Angular}
-Zie tabel \ref{table:angularstackoverflow} (raadpleging op 8/04/2019) op pagina \pageref{table:angularstackoverflow}. \\ \\
-Angular heeft een heel groot aantal aangemaakte issues wat erop wijst dat Angular een zeer populair framework is. Het percentage opgeloste issues ligt rond de 60 percent, wat een redelijk goede score is.
-\begin{table}[H]
-	\begin{tabular}{|l|l|l|l|}
-		\hline
-		Naam van de tag   & \textbf{Aantal aangemaakte issues} & \textbf{Aantal onopgeloste issues} & \textbf{\% opgeloste issues} \\ \hline
-		\textbf{Angular}  & 161.326                            & 65.823                             & 59,20\%                              \\ \hline
-		\textbf{Angular5} & 2.827                              & 1.193                              & 57,80\%                              \\ \hline
-		\textbf{Angular6} & 2.763                              & 1.181                              & 57,26\%                              \\ \hline
-		\textbf{Angular7} & 723                                & 320                                & 55,74\%                              \\ \hline
-		\textbf{Totaal}   & \textbf{167.639}                   & \textbf{68.517}                    & \textbf{59.13\%}                     \\ \hline
-	\end{tabular}
-\caption{Populariteit van Angular op Stack Overflow}
-\label{table:angularstackoverflow}
-\end{table}
-\subsubsection{Vaadin}
-Zie tabel \ref{table:vaadinstackoverflow} (raadpleging op 8/04/2019) op pagina \pageref{table:vaadinstackoverflow}. \\ \\
-Het aantal aangemaakte issues van Vaadin ligt laag. Dit wijst erop dat Vaadin niet veel gebruikers heeft. Het percentage opgeloste issues ligt echter zeer hoog, namelijk rond de 84 percent. Ondanks de kleinere omvang van community is de kans op een oplossing van een issue dus toch groot. \\
-
-\begin{table}[H]
-	\begin{tabular}{|l|l|l|l|}
-		\hline
-		Naam van de tag   & \textbf{Aantal aangemaakte issues} & \textbf{Aantal onopgeloste issues} & \textbf{\% opgeloste issues} \\ \hline
-		\textbf{Vaadin}  & 4.588                            & 691                             & 84,94\%                              \\ \hline
-		\textbf{Vaadin6} & 9                              & 1                              & 88,89\%                              \\ \hline
-		\textbf{Vaadin7} & 386                              & 85                              & 77,98\%                              \\ \hline
-		\textbf{Vaadin8} & 166                                & 49                                & 70,48\%                              \\ \hline
-		\textbf{Vaadin10} & 36                                & 12                                & 66,66\%                              \\ \hline
-		\textbf{Totaal}   & \textbf{5.185}                   & \textbf{838}                    & \textbf{83.84\%}                     \\ \hline
-	\end{tabular}
-	\caption{Populariteit van Vaadin op Stack Overflow}
-	\label{table:vaadinstackoverflow}
-\end{table}
-
-\subsection{Reddit}
-Reddit is een social sharing website waarbij gebruikers zelf de content aanleveren. Dit kunnen zowel artikels als afbeeldingen of video's zijn. Reddit bestaat uit verschillende subreddits die handelen over bepaalde onderwerpen. Het aantal subscribers van deze subreddits kunnen een indicator vormen voor de populariteit van het onderwerp.\\
-
-Uit de gegevens van tabel \ref{table:reddit} kunnen we afleiden dat Angular veel populairder is dan Vaadin. Met meer dan 200 keer meer subscribers is het verschil zeer duidelijk. Bovendien is de subreddit r/vaadin ook veel minder actief dan r/angular.
-\begin{table}[H]
-	\begin{tabular}{|l|l|l|}
-		\hline
-		\textbf{Subreddit}  & \textbf{Aantal subscribers} & \textbf{Aantal posts in de laatste 30 dagen} \\ \hline
-		\textbf{r/angular2} & 31.468                      & 79                                           \\ \hline
-		\textbf{r/vaadin}   & 147                         & 0                                            \\ \hline
-	\end{tabular}
-	\caption{Populariteit van de frameworks op Reddit}
-\label{table:reddit}
-\end{table}
-
-\subsection{Stack Overflow Developer Survey}
-Elk jaar voert Stack Overflow zijn Developer Survey \autocite{DeveloperSurvey2019} uit, waarbij duizenden developers vertellen over wat ze leren, welke tools en frameworks ze gebruiken en welke job ze uitvoeren. De resultaten hiervan kunnen gebruikt worden om de populariteit te bepalen van deze onderdelen. Door de resultaten de afgelopen jaren te gebruiken kan men bovendien een inzicht krijgen in de evolutie van de populariteit.
-
-
-\subsubsection{Resultaten 2017}
-In 2017 was Angular het tweede meest gebruikte framework, met maar liefst 44 percent van de respondenten die reeds het framework gebruikt hadden. Bovendien vonden meer dan de helft van de gebruikers het een leuk framework om te gebruiken.
-
-Vaadin werd niet genoemd in deze enquête wat erop wijst dat het in 2017 geen populair framework was.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.6\linewidth]{2017Frameworks}
-	\caption{Frameworks, Libraries, and Other Technologies 2017 \autocite{DeveloperSurvey2017}}
-	\label{fig:Frameworks, Libraries, and Other Technologies 2017}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.6\linewidth]{2017LovedFrameworks}
-	\caption{Most Loved Frameworks, Libraries and Other Technologies 2017 \autocite{DeveloperSurvey2017}}
-	\label{fig:Most Loved Frameworks, Libraries and Other Technologies 2017}
-\end{figure}
-
-\subsubsection{Resultaten 2018}
-In 2018 was Angular nog steeds het tweede meest gebruikte framework, maar het aantal respondenten die er al gebruik van gemaakt hadden daalde naar 37 percent. Nog steeds vonden meer dan de helft van de gebruikers het een leuk framework om te gebruiken.
-
-Vaadin werd niet genoemd in deze enquête wat erop wijst dat het in 2018 geen populair framework was.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.6\linewidth]{2018Frameworks}
-	\caption{Frameworks, Libraries, and Other Technologies 2018 \autocite{DeveloperSurvey2018}}
-	\label{fig:Frameworks, Libraries, and Other Technologies 2018}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.6\linewidth]{2018LovedFrameworks}
-	\caption{Most Loved Frameworks, Libraries and Other Technologies 2018 \autocite{DeveloperSurvey2018}}
-	\label{fig:Most Loved Frameworks, Libraries and Other Technologies 2018}
-\end{figure}
-
-\subsubsection{Resultaten 2019}
-De daling van de populariteit van Angular zette zich ook in 2019 verder. Het zakte van de tweede naar de derde plaats van populairste framework. Het aantal respondenten die gebruik maakten van het framework zakte naar 31 percent. Nochtans steeg het percentage van ontwikkelaars die er graag gebruik van maken naar 57 percent.
-
-Vaadin werd niet genoemd in deze enquête wat erop wijst dat het in 2019 geen populair framework is.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.6\linewidth]{2019Frameworks}
-	\caption{Frameworks, Libraries, and Other Technologies 2019 \autocite{DeveloperSurvey2019}}
-	\label{fig:Frameworks, Libraries, and Other Technologies 2019}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.6\linewidth]{2019LovedFrameworks}
-	\caption{Most Loved Frameworks, Libraries and Other Technologies 2019 \autocite{DeveloperSurvey2019}}
-	\label{fig:Most Loved Frameworks, Libraries and Other Technologies 2019}
-\end{figure}
-
-\subsection{Google Trends}
-
-Google Trends is een dienst van Google die via grafieken inzicht geeft wanneer en hoe vaak op een bepaald woord is gezocht met Google. \\ \\
-De cijfers in figuur \ref{fig:Google Trends zoektermen} geven de zoekinteresse aan ten opzichte van het hoogste punt in het diagram voor de betreffende regio en periode. Een waarde van 100 is de piekpopulariteit voor die term. Een waarde van 50 betekent dat de term half zo populair is. Een score van 0 betekent dat er onvoldoende gegevens beschikbaar zijn voor deze term. De resultaten van de zoekterm "Angular" worden weergegeven door een rode lijn, de resultaten van de zoekterm "Vaadin" door een blauwe lijn.
-
-Er kan geconcludeerd worden dat er wereldwijd veel vaker gezocht wordt naar het sleutelwoord "Angular" dan naar "Vaadin". 
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.6\linewidth]{GoogleTrendsTimeLine}
-	\caption{Zoektermen Vaadin versus Angular \autocite{GoogleTrends2019}}
-	\label{fig:Google Trends zoektermen}
-\end{figure}
-
-\subsection{Github}
-GitHub is een populaire website waarop software kan geplaatst worden. GitHub is gebouwd rond het Git-versiebeheersysteem, waardoor GitHub alle mogelijkheden van Git en eigen toevoegingen aanbiedt. Het aantal watchers, stars en forks van een framework op Github is een indicator voor de populariteit van het framework. In tabel \ref{table:github} wordt nogmaals duidelijk dat Angular veel populairder is dan Vaadin.
-
-\begin{table}[H]
-	\begin{tabular}{|l|l|l|l|}
-		\hline
-		\textbf{Github}  & \textbf{Aantal watchers} & \textbf{Aantal stars} & \textbf{Aantal forks} \\ \hline
-		\textbf{Angular} & 3284                     & 47.296                & 12.612                \\ \hline
-		\textbf{Vaadin}  & 57                       & 184                   & 55                    \\ \hline
-	\end{tabular}
-	\caption{Populariteit van de frameworks op Github}
-\label{table:github}
-\end{table}
+\section{Moeilijkheidsgraad}
+Het aanleren van een framework is niet altijd eenvoudig. Hoe sneller een developer een framework onder de knie kan krijgen hoe beter. 
+Angular is vrij moeilijk om aan te leren: de programmeur moet namelijk drie verschillende talen leren.
+Eerst en vooral moet hij TypeScript leren. Hiervoor heeft hij een voorkennis nodig van JavaScript. Daarenboven moet hij ook een uitgebreide kennis hebben van HTML en CSS voor het maken en stylen van de templates.
+\\
+In tegenstelling tot Angular is Vaadin veel eenvoudiger om te leren. De programmeur moet enkel Java kennen, kennis van HTML en CSS is een pluspunt maar niet noodzakelijk.
+Doordat er enkel kennis van Java nodig is, is Vaadin een framework dat gemakkelijk aangeleerd kan worden door programmeurs die geen ervaring hebben in de web-development sector.
 
 \subsection{Conclusie}
-Angular is duidelijk veel populairder dan Vaadin, waardoor het framework stabieler is en de gebruiker kan rekenen op meer ondersteuning vanuit de community. Angular behoort tot de meest populaire frameworks, terwijl Vaadin niet populair is. De enige factor waar Vaadin beter op scoort dan Angular is het percentage opgeloste issues op Stack Overflow. 
+Angular is een vrij moeilijk framework om aan te leren doordat de programmeur drie talen moet kennen. Vaadin is makkelijker onder de knie te krijgen aangezien applicaties geschreven kunnen worden met kennis van één taal, namelijk Java. 
+Voor deze reden krijgt Vaadin een score van 4 en Angular een score van 2.
 
-Door de hierboven genoemde redenen krijgt Angular voor dit requirement een score van 5 en Vaadin een score van 2.
+\section{Persoonlijke ervaring}
 
 
 
